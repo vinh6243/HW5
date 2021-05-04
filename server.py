@@ -15,6 +15,7 @@ address = (ip,port)
 server.bind(address)
 server.listen(1)
 
+#making prediction and store them inside the array.
 def prediction(results):
     if(results[0][0]) == 1:
         return "Paper"
@@ -45,7 +46,7 @@ while True:
     print(" Processing data.\n")
     if(data=="client"):
         
-        client.send(("Rock, Paper and Scissors image classification server, Vinh Pham,"))
+        client.send(("Rock, Paper and Scissors image classification server, Vinh Pham,'[%s] %s %(ctime().data\n)").encode())
     
         print(" Processing done. \n [*] Reply sent")
     elif(data=="client rock.jpg"):
